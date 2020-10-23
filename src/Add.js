@@ -46,8 +46,8 @@ const Add = ({AddNewContact}) => {
   </Button></Link> 
   <Link to='/contact list'><Button variant="primary" type="cancel"  >
     Cancel
-  </Button>
-  </Link>
+  </Button></Link> 
+
   </div>
 </Form>
 
