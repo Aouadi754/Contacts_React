@@ -44,9 +44,10 @@ const Add = ({AddNewContact}) => {
   <Link to='/contact list'><Button variant="primary" type="submit"  onClick={() => { handleSubmit() }}>
     Submit
   </Button></Link> 
-  <Button variant="primary" type="cancel"  >
+  <Link to='/contact list'><Button variant="primary" type="cancel"  >
     Cancel
   </Button>
+  </Link>
   </div>
 </Form>
 
