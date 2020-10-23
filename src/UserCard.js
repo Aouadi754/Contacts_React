@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card,Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
@@ -17,7 +18,7 @@ function UserCard({UserData,Delete}) {
       </Card.Text>
     </Card.Body>
     <div className='butn'>
-            <Button variant="primary" >Edit</Button>
+            <Link to='/add contact'><Button variant="primary" >Edit</Button></Link>
             <Button variant="primary" onClick={()=> Delete(UserData)} >Delete</Button>
             </div>
   </Card>
