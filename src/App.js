@@ -33,10 +33,11 @@ function App() {
      <Link to='/add contact'> <Button variant="primary">add contact</Button></Link>
      </header>
      <div className='user'>
+
       <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact} handlChange={handlChange} setNewUserContact={setNewUserContact}/>} />
         <Route path='/contact list' render={ () => <div className='container' style={{maxWidth:"95%"}}>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete}/>)} </div>}  />
+          
         </div>
-    </div>
   );
 }
 export default App
