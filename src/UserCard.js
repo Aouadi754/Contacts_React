@@ -7,9 +7,9 @@ import './App.css';
 
 function UserCard({UserData,Delete}) {
     return (
-        <div>
-        <div className="movie" >
-<Card style={{margin:"20px",width:"270px",height:"400px"}}>
+        <div className ='List-card'>
+        <div className="movie" style={{margin:"20px",width:"270px",height:"400px", float:"left"}} >
+<Card >
     <Card.Img style={{height:"200px"}} variant="top" src={UserData.imageSrc} alt='' />
     <Card.Body style={{background:"#B6B8B8 "}} >
     <Card.Title className="text-center"  ><h4>{UserData.name}</h4></Card.Title>
@@ -18,8 +18,10 @@ function UserCard({UserData,Delete}) {
       </Card.Text>
     </Card.Body>
     <div className='butn'>
-            <Link to='/add contact'><Button variant="primary" >Edit</Button></Link>
-            <Button variant="primary" onClick={()=> Delete(UserData)} >Delete</Button>
+
+            <Link to='/add contact'><Button variant="primary" style={{backgroundColor:"green"}}>Edit</Button></Link>
+            <Button variant="primary" style={{backgroundColor:"red"}} onClick={()=> Delete(UserData)} >Delete</Button>
+
             </div>
   </Card>
             
