@@ -20,19 +20,17 @@ const Add = ({AddNewContact,handlChange,setNewUserContact}) => {
 
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Name</Form.Label>
-    <Form.Control type="name" placeholder="name" name="name" onChange={handlChange}/>
+    <Form.Control type="name" placeholder="name"  name="name" onChange={handlChange}/>
   </Form.Group>
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Picture</Form.Label>
     <Form.Control type="url" placeholder="picture" name="imageSrc" onChange={handlChange} />
   </Form.Group>
   <div className='button'>
-
   <Link to='/contact list'><Button variant="primary" type="submit" style={{backgroundColor:"green"}}  onClick={() => { AddNewContact();setNewUserContact({name:"", Email: "", imageSrc: "" }) }}>
-
     Submit
   </Button></Link> 
-  <Link to='/contact list'><Button variant="primary" type="cancel"  style={{backgroundColor:"gold"}}>
+  <Link to='/contact list'><Button variant="primary" type="cancel" style={{backgroundColor:"gold"}} >
     Cancel
   </Button></Link> 
   </div>

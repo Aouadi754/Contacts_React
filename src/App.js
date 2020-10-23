@@ -35,8 +35,8 @@ function App() {
      <div className='user'>
 
       <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact} handlChange={handlChange} setNewUserContact={setNewUserContact}/>} />
-        <Route path='/contact list' render={ () => <div style={{display:"flex", justifyContent:"space-around"}}>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete}/>)} </div>}  />
-
+        <Route path='/contact list' render={ () => <div className='container' style={{maxWidth:"95%"}}>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete}/>)} </div>}  />
+          
         </div>
   );
 }

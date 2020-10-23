@@ -44,11 +44,6 @@ box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
    border: solid;
    color: aquamarine;
  }
-/*.user {
-  display: flex;
-  justify-content: center;
-  margin-top: 6%;
-}*/
 .user {
   display: flex;
   grid-gap: 20px;
@@ -78,3 +73,4 @@ background-color: skyblue;
     border-radius: 15px;
     flex-flow: column nowrap;
   }
+
