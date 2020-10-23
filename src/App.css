@@ -5,15 +5,15 @@
   justify-content: space-around;
 }
 .List {
-  width: 29%;
+  width: 23%;
     margin-left: 35%;
     top: 13%;
 }
 .button {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 21%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .movie:hover{
   -webkit-box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
@@ -28,3 +28,6 @@ box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
    background-color: #B6B8B8;
 
  }
+.user {
+  display: flex;
+}
