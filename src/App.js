@@ -23,6 +23,7 @@ function App() {
      <Link to='/contact list'><Button variant="primary">contact list</Button> </Link> 
      <Link to='/add contact'> <Button variant="primary">add contact</Button></Link>
      </div>
+     <div className='user'>
   <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact}/>} />
         <Route path='/contact list' render={ () => <div>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete} />)} </div>}  />
     </div>
