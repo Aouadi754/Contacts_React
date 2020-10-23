@@ -21,14 +21,9 @@ function App() {
      <Link to='/contact list'><Button variant="primary">contact list</Button> </Link> 
      <Link to='/add contact'> <Button variant="primary">add contact</Button></Link>
      </div>
-       <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact}/> />
-        <Route path='/contact list'
-            render={ () =><div style={{display:"flex",flexWrap:"wrap",marginLeft:"8%",marginRight:"5%",marginTop:"60px"}}>
-            {UsersList.map((User, i)=>(<UserCard key={i} UserData={User} />))}     
-        </div> }/>
+  <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact}/>} />
+        <Route path='/contact list' render={ () => <div>{UsersList.map((User, i)=><UserCard key={i} UserData={User} />)} </div>}  />
     </div>
-
   );
 }
-
-export default App;
+export default App
