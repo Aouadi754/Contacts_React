@@ -2,7 +2,9 @@ import React from 'react'
 import {Card,Button} from 'react-bootstrap'
 import './App.css';
 
-function UserCard({UserData}) {
+
+
+function UserCard({UserData,Delete}) {
     return (
         <div>
         <div className="movie" >
@@ -16,7 +18,7 @@ function UserCard({UserData}) {
     </Card.Body>
     <div className='butn'>
             <Button variant="primary" >Edit</Button>
-            <Button variant="primary" >Delete</Button>
+            <Button variant="primary" onClick={()=> Delete(UserData)} >Delete</Button>
             </div>
   </Card>
             
