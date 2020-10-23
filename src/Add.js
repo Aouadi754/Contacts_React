@@ -1,14 +1,14 @@
 import React,{useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-
+import './App.css';
 
 const Add = ({AddNewContact,handlChange,setNewUserContact}) => {
     
 
 
     return (
-        <div>
+        <div className='add-user'>
             <Form className="add-Form"  >
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -27,10 +27,12 @@ const Add = ({AddNewContact,handlChange,setNewUserContact}) => {
     <Form.Control type="url" placeholder="picture" name="imageSrc" onChange={handlChange} />
   </Form.Group>
   <div className='button'>
-  <Link to='/contact list'><Button variant="primary" type="submit"  onClick={() => { AddNewContact();setNewUserContact({name:"", Email: "", imageSrc: "" }) }}>
+
+  <Link to='/contact list'><Button variant="primary" type="submit" style={{backgroundColor:"green"}}  onClick={() => { AddNewContact();setNewUserContact({name:"", Email: "", imageSrc: "" }) }}>
+
     Submit
   </Button></Link> 
-  <Link to='/contact list'><Button variant="primary" type="cancel"  >
+  <Link to='/contact list'><Button variant="primary" type="cancel"  style={{backgroundColor:"gold"}}>
     Cancel
   </Button></Link> 
   </div>

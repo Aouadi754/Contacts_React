@@ -27,16 +27,17 @@ function App() {
     SetUsersList(filtered)}
 
   return (
-    <div className='List'>
-    <div className="App">
+    <div className="body">
+    <header className="App">
      <Link to='/contact list'><Button variant="primary">contact list</Button> </Link> 
      <Link to='/add contact'> <Button variant="primary">add contact</Button></Link>
-     </div>
+     </header>
      <div className='user'>
+
       <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact} handlChange={handlChange} setNewUserContact={setNewUserContact}/>} />
-        <Route path='/contact list' render={ () => <div>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete}/>)} </div>}  />
+        <Route path='/contact list' render={ () => <div style={{display:"flex", justifyContent:"space-around"}}>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete}/>)} </div>}  />
+
         </div>
-    </div>
   );
 }
 export default App
