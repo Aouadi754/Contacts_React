@@ -12,6 +12,11 @@ import UserCard from './UserCard';
 function App() {
   const [UsersList, SetUsersList] = useState(UsersData);
   const AddNewContact = (x) => SetUsersList([...UsersList, x]);
+
+  const Delete=(element)=> {
+    let filtered= UsersList.filter(el=>el.Email!==element.Email)
+  SetUsersList(filtered)}
+
   return (
     <div className='List'>
     <div className="App">
@@ -19,7 +24,7 @@ function App() {
      <Link to='/add contact'> <Button variant="primary">add contact</Button></Link>
      </div>
   <Route path='/add contact' render={ () => <Add AddNewContact={AddNewContact}/>} />
-        <Route path='/contact list' render={ () => <div>{UsersList.map((User, i)=><UserCard key={i} UserData={User} />)} </div>}  />
+        <Route path='/contact list' render={ () => <div>{UsersList.map((User, i)=><UserCard key={i} UserData={User} Delete={Delete} />)} </div>}  />
     </div>
   );
 }
