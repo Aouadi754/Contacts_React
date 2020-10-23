@@ -3,23 +3,9 @@ import {Form, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 
-const Add = ({AddNewContact}) => {
+const Add = ({AddNewContact,handlChange,setNewUserContact}) => {
     
 
-    const [newUserContact, setNewUserContact] = useState({
-      name: "",
-      Email: "",
-      imageSrc: "",
-
-      });
-      const handlChange = (e) => {
-        setNewUserContact({ ...newUserContact, [e.target.name]: e.target.value });
-      };
-    
-      const handleSubmit = () => {
-        AddNewContact(newUserContact);
-        setNewUserContact({name:"", Email: "", imageSrc: "" });
-      };
 
     return (
         <div>
@@ -41,13 +27,12 @@ const Add = ({AddNewContact}) => {
     <Form.Control type="url" placeholder="picture" name="imageSrc" onChange={handlChange} />
   </Form.Group>
   <div className='button'>
-  <Link to='/contact list'><Button variant="primary" type="submit"  onClick={() => { handleSubmit() }}>
+  <Link to='/contact list'><Button variant="primary" type="submit"  onClick={() => { AddNewContact();setNewUserContact({name:"", Email: "", imageSrc: "" }) }}>
     Submit
   </Button></Link> 
   <Link to='/contact list'><Button variant="primary" type="cancel"  >
     Cancel
   </Button></Link> 
-
   </div>
 </Form>
 
