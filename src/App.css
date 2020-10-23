@@ -15,4 +15,11 @@
   display: flex;
   justify-content: space-around;
 }
+.movie:hover{
+  -webkit-box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
+-moz-box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
+box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
+  border-radius: 10px;
+  background-color:#A7C7F7;
+}
  
