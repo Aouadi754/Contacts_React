@@ -9,12 +9,9 @@ import {UsersData} from './UsersData'
 import UserCard from './UserCard';
 
 
-
 function App() {
-
-  const AddNewContact = (x) => SetUsersList([...UsersList, x]);
-
   const [UsersList, SetUsersList] = useState(UsersData);
+  const AddNewContact = (x) => SetUsersList([...UsersList, x]);
   return (
     <div className='List'>
     <div className="App">

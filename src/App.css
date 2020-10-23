@@ -22,4 +22,9 @@ box-shadow: -1px -1px 63px 11px rgba(0,0,0,0.54);
   border-radius: 10px;
   background-color:#A7C7F7;
 }
- 
+ .butn{
+   display: flex;
+   justify-content: space-between;
+   background-color: #B6B8B8;
+
+ }

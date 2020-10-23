@@ -1,13 +1,16 @@
 import React,{useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 const Add = ({AddNewContact}) => {
     
+
     const [newUserContact, setNewUserContact] = useState({
-        name: "",
-        Email: "",
-        imageSrc: "",
+      name: "",
+      Email: "",
+      imageSrc: "",
+
       });
       const handlChange = (e) => {
         setNewUserContact({ ...newUserContact, [e.target.name]: e.target.value });
@@ -15,10 +18,9 @@ const Add = ({AddNewContact}) => {
     
       const handleSubmit = () => {
         AddNewContact(newUserContact);
-        setNewUserContact({ name: "", email: "", picture: "" });
+        setNewUserContact({name:"", Email: "", imageSrc: "" });
       };
 
-      
     return (
         <div>
             <Form className="add-Form"  >
