@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Card,Button} from 'react-bootstrap'
 import './App.css';
 
 function UserCard({UserData}) {
@@ -14,11 +14,14 @@ function UserCard({UserData}) {
   {UserData.Email}
       </Card.Text>
     </Card.Body>
-   
-    
+    <div className='butn'>
+            <Button variant="primary" >Edit</Button>
+            <Button variant="primary" >Delete</Button>
+            </div>
   </Card>
             
         </div>
+       
         </div>
     )
 }

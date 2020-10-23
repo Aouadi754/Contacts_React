@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
 import {Form, Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const Add = ({AddNewContact}) => {
-    const [modalIsOpen, setIsOpen] = useState(false);
+   // const [modalIsOpen, setIsOpen] = useState(false);
     const [newUserContact, setNewUserContact] = useState({
+        email:"",
         name: "",
-        email: "",
         picture: "",
       });
       const handlChange = (e) => {
@@ -14,12 +15,12 @@ const Add = ({AddNewContact}) => {
     
       const handlSubmit = () => {
         AddNewContact(newUserContact);
-        setNewUserContact({ name: "", email: "", picture: "" });
+        setNewUserContact({ email: "", name:"", picture: "" });
       };
 
-      function closeModal() {
+  /*    function closeModal() {
         setIsOpen(false);
-      }
+      }*/
     return (
         <div>
             <Form className="add-Form"  >
@@ -40,10 +41,10 @@ const Add = ({AddNewContact}) => {
     <Form.Control type="url" placeholder="picture" name="picture" onChange={handlChange} />
   </Form.Group>
   <div className='button'>
-  <Button variant="primary" type="submit"  onClick={() => { handlSubmit();  closeModal(); }}>
+  <Link to='/contact list'> <Button variant="primary" type="submit"  onClick={() => { handlSubmit()}}>
     Submit
-  </Button>
-  <Button variant="primary" type="cancel" onClick={closeModal} >
+  </Button></Link> 
+ <Button variant="primary" type="cancel"  >
     Cancel
   </Button>
   </div>
