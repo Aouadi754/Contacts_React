@@ -5,7 +5,7 @@ import './App.css';
 
 
 
-function UserCard({UserData,Delete}) {
+function UserCard({UserData,Delete,SetEdit,setNewUserContact}) {
     return (
         <div className ='List-card'>
         <div className="movie" style={{margin:"20px",width:"270px",height:"400px", float:"left"}} >
@@ -19,7 +19,8 @@ function UserCard({UserData,Delete}) {
     </Card.Body>
     <div className='butn'>
 
-            <Link to='/add contact'><Button variant="primary" style={{backgroundColor:"green"}}>Edit</Button></Link>
+            <Link to='/add contact'><Button variant="primary" style={{backgroundColor:"green"}} onClick={()=>{
+                SetEdit(true);setNewUserContact({name:UserData.name,Email:UserData.Email,imageSrc:UserData.imageSrc})}}>Edit</Button></Link>
             <Button variant="primary" style={{backgroundColor:"red"}} onClick={()=> Delete(UserData)} >Delete</Button>
 
             </div>
